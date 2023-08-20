@@ -56,7 +56,7 @@ RTL is a description of digital circuits using registers, data paths, and contro
 ---
 In this curriculum, we will undertake an exploration of the operational mechanics of the RISC-V architecture and delve into the categorization of its assembly language constructs.
 
-1. **64 bit representation of signed & unsigned integer.**
+**1. 64 bit representation of signed & unsigned integer.**
 2. **Application Binary Interface (ABI).**
 3. **Memory allocation and Stack Pointer.**
 4. **Single and double precision floating point extensions (RV64F & RV64D).**
