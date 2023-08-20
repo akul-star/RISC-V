@@ -104,11 +104,16 @@ gcc <filename>
   ```
   cat <filename>
   ```
-  - Now we will run the c-program using the RISC.V GCC compiler, but before that we have to compile it. This will generate a file named <filename.o>
+- Now we will rum the code using RISC-V simulator to convert the C-program into RISC-V assembly language. The below command will create a compiled code named as <filename.o> 
+    ```
+   riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o sum1ton_O1.o sum1ton.c
+    ```
+- Open another terminal and write the below command to see the disassembled machine code instructions corresponding to the binary content in the object file.
 
-    ```
-    riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o <filename.o> <filename.c>
-    ```
+  ```
+  riscv64-unknown-elf-objdump -d sum1ton_O1.o | less
+  ```
+  
     
      
 
