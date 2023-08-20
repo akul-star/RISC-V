@@ -98,8 +98,7 @@ int main () {
 gcc <filename>
 ./a.out
 ```
-
- 
+ ![sum1tonout](https://github.com/akul-star/RISC-V/assets/75561390/13092e94-ae8a-4853-b227-2d284efd5e51)
 
 
 
