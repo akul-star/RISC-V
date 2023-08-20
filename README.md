@@ -115,7 +115,7 @@ gcc <filename>
   ```
   ![Assemblylan](https://github.com/akul-star/RISC-V/assets/75561390/9e0da9bb-c884-4c57-b7ee-f91223c77e17)
     
-     
+  To view the address of the line main() or printf()) type **/main** or **/printf**. To quit type **:q**.
 
 
 
