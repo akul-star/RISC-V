@@ -32,7 +32,8 @@ RISC-V (pronounced "risk-five") is an open-source instruction set architecture (
   In this section we will learn what exactly is the Instruction Set Architecture (ISA) role in a device and why it is required.  
 
   ![Screenshot from 2023-08-20 16-36-06](https://github.com/akul-star/RISC-V/assets/75561390/c3d08457-bac0-4a1e-b259-742281620f16)
-et's explore how applications communicate with hardware components through various layers, including the operating system (OS), compiler, assembler, and a Register Transfer Language (RTL) snippet.
+
+Let's explore how applications communicate with hardware components through various layers, including the operating system (OS), compiler, assembler, and a Register Transfer Language (RTL) snippet.
 
 1. Operating System (OS):
     The operating system provides an abstraction layer between applications and hardware. It manages the hardware resources, such as memory, processors, and I/O devices, and provides services that applications can use. 
