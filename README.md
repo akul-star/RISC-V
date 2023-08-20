@@ -100,7 +100,16 @@ gcc <filename>
 ```
  ![sum1tonout](https://github.com/akul-star/RISC-V/assets/75561390/13092e94-ae8a-4853-b227-2d284efd5e51)
 
-
+- To open the C-program inside the terminal, write the below command.
+  ```
+  cat <filename>
+  ```
+  - Now we will run the c-program using the RISC.V GCC compiler, but before that we have to compile it. This will generate a file named <filename>.o
+    ```
+    riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o <filename.o> <filename.c>
+    ```
+    
+     
 
 
 
