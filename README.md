@@ -74,9 +74,38 @@ In this curriculum, we will undertake an exploration of the operational mechanic
 
 <details>
 <summary> Labwork for RISC-V software toolchain  </summary>
+  
+  **GCC Compiler toolchain:** The GNU Compiler Toolchain is a collection of essential software development tools, including the GCC compiler for languages like C and C++, Binutils for working with binary files, GDB debugger, and libraries like Glibc. It enables the creation, compilation, and debugging of programs, supporting diverse platforms and architectures. 
 
- LAB-1: Program To Compute Sum From 1 to N 
-=========================================
+  Let us use GCC compiler for a C-program which sum's numbers from 1 to n.
+
+```
+#include <stdio.h>
+
+int main () {
+	int i,sum = 0, n = 6;
+	for (i = 1; i <=n; ++i) {
+		sum += i;
+	}
+	printf("The sum of the number from 1 to %d is %d\n", n,sum);
+	return 0;
+	}
+```
+- The above command can be compiled using the below command. 
+
+```
+gcc <filename>
+./a.out
+```
+
+ 
+
+
+
+
+
+
+  
 
 
 </details>
