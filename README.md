@@ -75,4 +75,8 @@ In this curriculum, we will undertake an exploration of the operational mechanic
 <details>
 <summary> Labwork for RISC-V software toolchain  </summary>
 
+ LAB-1: Program To Compute Sum From 1 to N 
+=========================================
+
+
 </details>
