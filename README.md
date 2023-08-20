@@ -31,6 +31,17 @@ RISC-V (pronounced "risk-five") is an open-source instruction set architecture (
 
   ---
   ![Screenshot from 2023-08-20 16-36-06](https://github.com/akul-star/RISC-V/assets/75561390/c3d08457-bac0-4a1e-b259-742281620f16)
+et's explore how applications communicate with hardware components through various layers, including the operating system (OS), compiler, assembler, and a Register Transfer Language (RTL) snippet.
 
+1. Operating System (OS):
+    The operating system provides an abstraction layer between applications and hardware. It manages the hardware resources, such as memory, processors, and I/O devices, and provides services that applications can use. 
 
+2. Compiler:
+    The compiler translates high-level programming code written in languages like C, C++, or Java into machine code that the hardware can execute. During compilation, the compiler maps high-level code constructs to appropriate machine instructions. For instance, if an application contains a loop, the compiler generates machine instructions that correspond to looping constructs supported by the ISA (RISC-V in our case).
+
+3. Assembler:
+    An assembler converts assembly language code (a human-readable representation of machine code) into actual machine code. Assembly language is a low-level representation of the ISA, and each assembly instruction typically corresponds to a single machine instruction. Assemblers take care of translating assembly mnemonics into binary machine code that the hardware understands.
+
+4. RTL Snippet (Register Transfer Language):
+RTL is a description of digital circuits using registers, data paths, and control logic. It's used in hardware design to describe the behavior of digital systems at a low level. 
 </details>
