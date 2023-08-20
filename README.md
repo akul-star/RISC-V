@@ -3,5 +3,5 @@ RISC-V (pronounced "risk-five") is an open-source instruction set architecture (
 ## DAY-0: Installation of the Tools
 ## DAY-1: Introduction to RISC-V ISA and GNU compiler toolchain
 <details>
-<summary> Introduction </summary>
+<summary> INTRODUCTION  </summary>
 </details>
