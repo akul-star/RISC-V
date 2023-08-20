@@ -104,7 +104,8 @@ gcc <filename>
   ```
   cat <filename>
   ```
-  - Now we will run the c-program using the RISC.V GCC compiler, but before that we have to compile it. This will generate a file named <filename>.o
+  - Now we will run the c-program using the RISC.V GCC compiler, but before that we have to compile it. This will generate a file named <filename.o>
+
     ```
     riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o <filename.o> <filename.c>
     ```
