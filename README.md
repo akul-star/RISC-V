@@ -71,3 +71,8 @@ In this curriculum, we will undertake an exploration of the operational mechanic
 **7. Psuedo Instructions**
 
 </details>
+
+<details>
+<summary> Labwork for RISC-V software toolchain  </summary>
+
+</details>
