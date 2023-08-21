@@ -207,10 +207,12 @@ So, the two's complement representation of -5 in an 8-bit system would be 111110
 
 To verify, if you add -5 and 5 using binary addition: markdown
 
+```
   11111011  (Two's complement of -5)
 + 00000101  (Positive binary of 5)
 -----------
   00000000
+```
 
 You get zero, which indicates that the method is working correctly. Remember that the number of bits in the representation affects the range of values you can represent using two's complement. An 8-bit representation can represent values from -128 to 127, for example.
 
