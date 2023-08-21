@@ -242,7 +242,6 @@ Use the below command to compile the C program and to make the object file.
 ```
 
 
-
 </details>
 
 ## References
