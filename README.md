@@ -178,14 +178,18 @@ An assembler converts human-readable instructions written in assembly language i
 ---
 ![64bits](https://github.com/akul-star/RISC-V/assets/75561390/cd649cba-2672-47e8-ad7a-998fa715a840)
 
+Here's a breakdown of the common terminology for data sizes in a 64-bit RISC-V architecture:
 
+1. Byte: In a 64-bit RISC-V architecture, a "byte" refers to the smallest addressable unit of data, just like in any computer architecture. Regardless of the bit width of the processor's architecture, a byte remains a fundamental unit of data storage.
 
+2. Word: A halfword is 16 bits or 2 bytes in size. It can store larger integer values than a byte.
 
+3. Doubleword: In a 64-bit architecture, a word is typically 64 bits or 8 bytes in size. It can hold even larger integer values and is often used as the natural data size for many   operations and data storage.
 
-
-
+4. Quadword: A quadword, also known as a "long long" or "octaword," is 128 bits or 16 bytes in size. It can store very large integer values or double-precision floating-point numbers.
 
 
 
 </details>
+
 ## References
