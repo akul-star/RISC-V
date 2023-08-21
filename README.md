@@ -191,6 +191,36 @@ Here's a breakdown of the common terminology for data sizes in a 64-bit RISC-V a
 Signed Numbers
 =============
 
+Signed numbers represent both positive and negative values. In a signed number representation, the leftmost bit (most significant bit) is reserved to indicate the sign of the number. For example, in a 4-bit signed representation, the leftmost bit would be the sign bit, and the remaining 3 bits would represent the magnitude of the number. In the two's complement representation, which is commonly used for signed integers in computers, the sign bit is 0 for positive numbers and 1 for negative numbers. The remaining bits represent the magnitude of the number using binary notation.
+
+Two's complement is a common method used in computing to represent negative numbers in binary form. It simplifies arithmetic operations like addition and subtraction, as well as hardware implementation. Here's how to use two's complement to represent a negative number:
+
+    Determine the Positive Binary Representation:
+    Start by representing the positive magnitude of the number in binary form. For example, let's use -5 as the negative number. The positive binary representation of 5 is 0101.
+
+    Invert the Bits:
+    To find the two's complement of a negative number, first invert all the bits of its positive binary representation. Change all 0s to 1s and all 1s to 0s. Inverting 0101 gives you 1010.
+
+    Add 1:
+    Finally, add 1 to the inverted binary number obtained in the previous step. In this case, 1010 + 0001 equals 1011.
+
+So, the two's complement representation of -5 in an 8-bit system would be 11111011.
+
+To verify, if you add -5 and 5 using binary addition:
+
+markdown
+
+  11111011  (Two's complement of -5)
++  00000101  (Positive binary of 5)
+-----------
+  00000000
+
+You get zero, which indicates that the method is working correctly. Remember that the number of bits in the representation affects the range of values you can represent using two's complement. An 8-bit representation can represent values from -128 to 127, for example.
+
+- RISC-V doubleword can represent 0 to (2^64 - 1) unsigned numbers or positive numbers.
+- For a 64bit binary number, the biggest positive number possible to represent is (2^63 - 1) and the smallest value is -2^63.
+- If MSB is 0 then the binary number is unsigned and if the MSB is 1 then the binary number is signed number as we can already tell from the above example.   
+
 </details>
 
 ## References
