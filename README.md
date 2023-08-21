@@ -221,6 +221,15 @@ You get zero, which indicates that the method is working correctly. Remember tha
 - For a 64bit binary number, the biggest positive number possible to represent is (2^63 - 1) and the smallest value is -2^63.
 - If MSB is 0 then the binary number is unsigned and if the MSB is 1 then the binary number is signed number as we can already tell from the above example.   
 
+
+LAB: Signed & Unsigned Integer's
+=================================
+We will write a C-program whcih finds the highest possible unsigned and signed number in 64 bit format.
+
+
+
+
+
 </details>
 
 ## References
