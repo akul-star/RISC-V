@@ -137,6 +137,7 @@ If we change the "O1" to "Ofast" in the context of GCC (GNU Compiler Collection)
 
 SPIKE Simulation & Debug
 ========================
+
 Till now we have compiled the C-program using RISC-V simulator and has observed the assembly instructions of the C-program. To observe the ouput of the c-program using the riscv compiler, we givr the below mentioned command.
 ```
 riscv64-unknown-elf-objdump -d sum1ton_O1.o | less
