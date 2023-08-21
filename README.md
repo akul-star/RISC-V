@@ -83,7 +83,7 @@ In this curriculum, we will undertake an exploration of the operational mechanic
 <summary> Labwork for RISC-V software toolchain  </summary>
 
 ---  
-  **GNC Compiler toolchain:** The GNU Compiler Toolchain is a collection of essential software development tools, including the GCC compiler for languages like C and C++, Binutils for working with binary files, GDB debugger, and libraries like Glibc. It enables the creation, compilation, and debugging of programs, supporting diverse platforms and architectures. 
+  **GNU Compiler toolchain:** The GNU Compiler Toolchain is a collection of essential software development tools, including the GCC compiler for languages like C and C++, Binutils for working with binary files, GDB debugger, and libraries like Glibc. It enables the creation, compilation, and debugging of programs, supporting diverse platforms and architectures. 
 
   Let us use GCC compiler for a C-program which sum's numbers from 1 to n.
 
