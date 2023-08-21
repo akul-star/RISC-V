@@ -84,8 +84,8 @@ In this curriculum, we will undertake an exploration of the operational mechanic
 
 ---  
   
-  GCC Compile & Toolchain
-  ========================
+GCC Compile & Toolchain
+========================
  
   **GNU Compiler toolchain:** The GNU Compiler Toolchain is a collection of essential software development tools, including the GCC compiler for languages like C and C++, Binutils for working with binary files, GDB debugger, and libraries like Glibc. It enables the creation, compilation, and debugging of programs, supporting diverse platforms and architectures. 
 
