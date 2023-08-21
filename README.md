@@ -160,7 +160,18 @@ Now by pressing ENTER each assembly instruction will run one at a time.
 ---
 ![Assemblylan](https://github.com/akul-star/RISC-V/assets/75561390/840108f8-5c64-4c95-a71d-59d61b7cc073)
 
-
 </details>
 
+<details> 
+ 
+<summary> Integer Number Representation </summary>
+
+Unsigned Numbers
+================
+Let's look into how does the RISC-V represents 64-but unsigned numbers.
+
+
+
+
+</details>
 ## References
