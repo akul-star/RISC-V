@@ -195,23 +195,20 @@ Signed numbers represent both positive and negative values. In a signed number r
 
 Two's complement is a common method used in computing to represent negative numbers in binary form. It simplifies arithmetic operations like addition and subtraction, as well as hardware implementation. Here's how to use two's complement to represent a negative number:
 
-    Determine the Positive Binary Representation:
-    Start by representing the positive magnitude of the number in binary form. For example, let's use -5 as the negative number. The positive binary representation of 5 is 0101.
+Determine the Positive Binary Representation:   
 
-    Invert the Bits:
-    To find the two's complement of a negative number, first invert all the bits of its positive binary representation. Change all 0s to 1s and all 1s to 0s. Inverting 0101 gives you 1010.
+Start by representing the positive magnitude of the number in binary form. For example, let's use -5 as the negative number. The positive binary representation of 5 is 0101.
 
-    Add 1:
-    Finally, add 1 to the inverted binary number obtained in the previous step. In this case, 1010 + 0001 equals 1011.
+- Invert the Bits:To find the two's complement of a negative number, first invert all the bits of its positive binary representation. Change all 0s to 1s and all 1s to 0s. Inverting 0101 gives you 1010.
+
+- Add 1: Finally, add 1 to the inverted binary number obtained in the previous step. In this case, 1010 + 0001 equals 1011.
 
 So, the two's complement representation of -5 in an 8-bit system would be 11111011.
 
-To verify, if you add -5 and 5 using binary addition:
-
-markdown
+To verify, if you add -5 and 5 using binary addition: markdown
 
   11111011  (Two's complement of -5)
-+  00000101  (Positive binary of 5)
+ +00000101  (Positive binary of 5)
 -----------
   00000000
 
