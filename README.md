@@ -137,8 +137,20 @@ If we change the "O1" to "Ofast" in the context of GCC (GNU Compiler Collection)
 
 SPIKE Simulation & Debug
 ========================
+Till now we have compiled the C-program using RISC-V simulator and has observed the assembly instructions of the C-program. To observe the ouput of the c-program using the riscv compiler, we givr the below mentioned command.
+```
+riscv64-unknown-elf-objdump -d sum1ton_O1.o | less
+spike pk <filename>.o
+```
+**SPIKE ISA Simulator:**"Spike" refers to the RISC-V ISA Simulator, which is a functional simulator for the RISC-V instruction set architecture (ISA). It allows developers to run RISC-V assembly code on a simulated RISC-V processor, enabling them to test and experiment with RISC-V programs without needing access to physical RISC-V hardware. Now we will use the SPIKE simulator to debug the assembly instructions in the "main" content of the assembly instructions. Give the below command to open the debugger.
 
-
+```
+spike -d pk <file1ton>.o
+```
+When the debugger is open, give the below instruction for the program counter to run till the memory address location of first instruction of the "main" whcih is 1000b0.
+```
+until pc 0 1000b0
+```
   
 
 </details>
