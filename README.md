@@ -153,8 +153,11 @@ When the debugger is open, give the below instruction for the program counter to
 until pc 0 1000b0
 ```
 Now by pressing ENTER each assembly instruction will run one at a time.
-<img ![spikedebug](https://github.com/akul-star/RISC-V/assets/75561390/7837e4bc-927e-4105-b404-e2e24f5678b1)>
-<img ![Assemblylan](https://github.com/akul-star/RISC-V/assets/75561390/3a60c2c0-0024-4c11-ad06-60b3a8be3c0b)>
+---
+![spikedebug](https://github.com/akul-star/RISC-V/assets/75561390/7837e4bc-927e-4105-b404-e2e24f5678b1)
+
+---
+![Assemblylan](https://github.com/akul-star/RISC-V/assets/75561390/3a60c2c0-0024-4c11-ad06-60b3a8be3c0b)
 
 
 </details>
