@@ -152,7 +152,8 @@ When the debugger is open, give the below instruction for the program counter to
 ```
 until pc 0 1000b0
 ```
-  
+Now by pressing ENTER each assembly instruction will run one at a time.
+
 
 </details>
 
