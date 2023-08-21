@@ -170,6 +170,13 @@ Unsigned Numbers
 ================
 Let's look into how does the RISC-V represents 64-but unsigned numbers.
 
+---
+![unsigned](https://github.com/akul-star/RISC-V/assets/75561390/b0c14489-ab2a-40e8-8d52-ae2dbc42c5b8)
+
+An assembler converts human-readable instructions written in assembly language into a sequence of 0s and 1s that a specific computer chip designed with the RISC-V architecture can understand and execute, essentially translating our instructions into the language the chip "speaks". This is why it becomes very important to understand from human readable format to a binary format, and hoe binary is arranged and respresented by RISC-V implementation. Let's understand for a 64-bit RISC-V architecture,
+
+
+
 
 
 
