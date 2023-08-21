@@ -240,7 +240,28 @@ Use the below command to compile the C program and to make the object file.
  spike pk <filename>.o
 ```
 
+---
+![unsignedlab](https://github.com/akul-star/RISC-V/assets/75561390/2c8d8334-688e-4caf-9e1d-d2460149442e)
+
+Note: **long long int** data type can store maximum of 64 bits.
+
+Now we will modify our C-program to give highest and lowest possible number for a signed number.
+
+```
+#include <stdio.h>
+#include <math.h>
+int main () {
+    long long int max = (long long int) (pow(2,63)-1);
+    long long int min = (long long int) (pow(2,63)*-1);
+    printf ("highest number represented by unsigned long long int is %lld\n",max);
+    printf ("lowest number represented by unsigned long long int is %lld\n",min);
+    return 0;
+ }   
 
 </details>
+```
+The program calculates and displays the highest and lowest values representable by the long long int data type. It uses bitwise left-shifting for accuracy in computing these values. The calculated maximum is obtained by shifting the bit 1 to the left by 63 positions and subtracting 1, while the minimum is the negative of the shifted bit pattern. The program then prints these values using formatted output.
+
+
 
 ## References
