@@ -30,10 +30,7 @@ RISC-V (pronounced "risk-five") is an open-source instruction set architecture (
   
   ---
   In this section we will learn what exactly is the Instruction Set Architecture (ISA) role in a device and why it is required.  
-
 ![Screenshot from 2023-08-21 10-46-39](https://github.com/akul-star/RISC-V/assets/75561390/ae4ea0da-5b23-4771-90d3-4ef404471e51)
-
-
 
 Let's explore how applications communicate with hardware components through various layers, including the operating system (OS), compiler, assembler, and a Register Transfer Language (RTL) snippet.
 
