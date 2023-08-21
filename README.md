@@ -262,6 +262,11 @@ int main () {
 ```
 The program calculates and displays the highest and lowest values representable by the long long int data type. It uses bitwise left-shifting for accuracy in computing these values. The calculated maximum is obtained by shifting the bit 1 to the left by 63 positions and subtracting 1, while the minimum is the negative of the shifted bit pattern. The program then prints these values using formatted output.
 
+---
+![Signedmaxmin](https://github.com/akul-star/RISC-V/assets/75561390/08f170b4-3dad-4fbb-82b3-2b523667655a)
+
+
+ 
 
 
 ## References
