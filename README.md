@@ -208,7 +208,7 @@ So, the two's complement representation of -5 in an 8-bit system would be 111110
 To verify, if you add -5 and 5 using binary addition: markdown
 
   11111011  (Two's complement of -5)
- +00000101  (Positive binary of 5)
++ 00000101  (Positive binary of 5)
 -----------
   00000000
 
