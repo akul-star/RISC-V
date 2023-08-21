@@ -226,7 +226,20 @@ LAB: Signed & Unsigned Integer's
 =================================
 We will write a C-program whcih finds the highest possible unsigned and signed number in 64 bit format.
 
-
+```
+#include <stdio.h>
+#include <math.h>
+int main () {
+    unsigned long long int max = (unsigned long long int) (pow(2,64)-1);
+    printf ("highest number represented by unsigned long long int is %llu\n",max);
+    return 0;
+ }   
+```
+Use the below command to compile the C program and to make the object file.
+ ```
+ riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o <filename>.o <filename>.c
+ spike pk <filename>.o
+```
 
 
 
