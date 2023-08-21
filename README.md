@@ -155,10 +155,10 @@ until pc 0 1000b0
 Now by pressing ENTER each assembly instruction will run one at a time.
 
 ---
-![spikedebug](https://github.com/akul-star/RISC-V/assets/75561390/7837e4bc-927e-4105-b404-e2e24f5678b1
+![spikedebug](https://github.com/akul-star/RISC-V/assets/75561390/cfd3c9bd-b414-4a36-98dc-848e1d4721ba)
 
 ---
-![Assemblylan](https://github.com/akul-star/RISC-V/assets/75561390/3a60c2c0-0024-4c11-ad06-60b3a8be3c0b)
+![Assemblylan](https://github.com/akul-star/RISC-V/assets/75561390/840108f8-5c64-4c95-a71d-59d61b7cc073)
 
 
 </details>
