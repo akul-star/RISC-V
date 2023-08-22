@@ -273,9 +273,18 @@ The program calculates and displays the highest and lowest values representable 
 
 When an application wants to perform a task that requires interaction with the operating system, it makes a system call to request the corresponding service. The operating system's kernel then handles the request and performs the requested operation on behalf of the application. Examples of common system calls include opening or closing files, reading or writing data, creating new processes, allocating and freeing memory, and managing input/output devices.
 
+- User ISA (Instruction Set Architecture): This is the set of instructions visible to application programmers and software developers. It defines the operations and data manipulation capabilities that application-level programs can use. User ISA provides a higher-level abstraction, allowing programmers to write software without needing to understand the underlying hardware details. Common examples of user-level instructions include arithmetic operations, memory access, branching, and more. Different processors or CPUs from various manufacturers might have different user ISAs, which can affect the compatibility of software across different systems.
+
+- System ISA (Instruction Set Architecture): Also known as the "privileged ISA" or "machine ISA," this is the set of instructions used by the operating system and system-level software to control and manage the hardware resources of the computer. System ISA instructions are generally more powerful and privileged than user-level instructions. They enable actions such as controlling memory protection, managing interrupts, handling I/O operations, and other low-level system management tasks. Access to system ISA instructions is typically restricted to the operating system kernel or other trusted system components.
+
 ABI (Application Binary Interface) with respect to system calls defines the standardized rules and conventions for how user-level applications interact with the operating system's kernel through binary-level communication. It encompasses details like how arguments are passed, system call numbers are identified, registers are used for communication, return values are retrieved, and errors are managed when making system calls. The ABI ensures consistent and reliable communication between user code and the kernel, abstracting the underlying hardware complexities and promoting compatibility across different software components and versions.
 
 In the end, we can say that if the application programmer wants to access the hardware resources of your processor, then it has to do it via registers. We need to understand the architecture of the registers provided by the RISC-V specifications.
+
+Memory Allocation for Doublewords
+=================================
+The RISC-V architecture has only 32 registers with a width of either 32 bit or 64 bit. 
+
 
 
 
