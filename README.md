@@ -34,7 +34,7 @@ RISC-V (pronounced "risk-five") is an open-source instruction set architecture (
 
 <details>
 
-<summary> Tool Installation <summary/>
+<summary> Tool Installation </summary>
 
 - Install the dependencies using the following command :
 
