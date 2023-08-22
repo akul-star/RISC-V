@@ -392,12 +392,9 @@ This instruction is used to store a 64-bit data value from a register into memor
 ---
 ![storedoubleword](https://github.com/akul-star/RISC-V/assets/75561390/67405938-a97f-4a71-aacd-e7f446a34bcc)
 
-ABI names
-=========
+32 Registers & their ABI names
+=============================
 The instructions we have been operating on signed and unsigned integers are called as Base Integer Instructions (RV64I). So, any CPU core which wants to implement these instructions are called as RV64I CPU core and will need to implement atleast the 47 base integer instructions out of which 3 we have already observed.
-
-
-
 
 In the RISC-V instruction set architecture (ISA), instructions are categorized into several types based on their functionality and operation. The following are the common types of instructions in RISC-V:
 
@@ -409,6 +406,11 @@ These instructions operate on an immediate value (a constant) and a register. Th
 
 3. S-Type Instructions (Store-Type):
    These instructions store a value from a register into memory at a specified address. They take an immediate offset and two registers (one source and one base) as operands. Example: sb, sh, sw.
+
+---
+![riscvABIname](https://github.com/akul-star/RISC-V/assets/75561390/56f550e0-4dac-4805-9f36-aaed77e054ce)
+
+ABI names refer to the Application Binary Interface names used in the context of the RISC-V architecture. The RISC-V ABI defines conventions and rules that govern how functions are called and how data is passed between different parts of a software system, such as between different parts of a program or between a program and its libraries.
 
 
 
