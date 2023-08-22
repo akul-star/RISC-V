@@ -79,12 +79,11 @@ source .bashrc
 
 <details/>
 
- 
-  ## DAY-1: Introduction to RISC-V ISA and GNU compiler toolchain
+
+## DAY-1: Introduction to RISC-V ISA and GNU compiler toolchain
 
 <details> 
- 
- <summary>INTRODUCTION </summary>
+  <summary>INTRODUCTION</summary>
   
   ---
   In this section we will learn what exactly is the Instruction Set Architecture (ISA) role in a device and why it is required.  
