@@ -520,11 +520,18 @@ spike pk custom1_to9.o
 ![1to9_custom_output](https://github.com/akul-star/RISC-V/assets/75561390/c76ed767-7772-48b6-b045-1bd498e99cbe)  
 
 - The disassembled code will look like as shown below.
-  
+
+--- 
+![1to9_custom_assemblyinstructions](https://github.com/akul-star/RISC-V/assets/75561390/66a38bcd-54f4-46e9-877f-700e98fde4d0) 
 
 </details>
 
+<details>
+<summary>Basic Verification Flow using iverilog</summary>
 
+
+ 
+</details>
 
 ## References
 
