@@ -31,6 +31,50 @@ RISC-V (pronounced "risk-five") is an open-source instruction set architecture (
 
 
 ## DAY-0: Installation of the Tools
+<details>
+
+<summary> Tool Installation <summary/>
+
+- Install the dependencies using the following command :
+
+```
+sudo apt-get install libboost-regex-dev
+```
+- Steps to install the toolchain
+
+```
+git clone https://github.com/kunalg123/riscv_workshop_collaterals.git
+cd riscv_workshop_collaterals
+chmod +x run.sh
+./run.sh
+```
+
+- Running this command will result in a make error. Ignore the error and follow the steps given below:
+
+```
+cd ~/riscv_toolchain/iverilog/
+git checkout --track -b v10-branch origin/v10-branch
+git pull 
+chmod 777 autoconf.sh 
+./autoconf.sh 
+./configure 
+make
+sudo make install 
+```
+
+- Once the toolchain is installed it is necessary to create a PATH variable in bashrc file. To create the path variable follow the steps given below :
+
+```
+gedit .bashrc
+
+
+#Type at last line
+export PATH="/home/akul-sinha/riscv_toolchain/riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linux-ubuntu14/bin:$PATH" 
+
+# close the bashrc and type in terminal
+source .bashrc
+```
+
 ## DAY-1: Introduction to RISC-V ISA and GNU compiler toolchain
 <details> 
  
