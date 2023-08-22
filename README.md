@@ -296,6 +296,17 @@ Now let us assume a XLEN 64 bit register. Their are two ways to load a doublewor
 
 1. Directly loading the 64 bit data to the regsiter of RISC-V.
 2. Using memory registers of 8bit length, we can load 64 bit data using 8 memory registers. Each memory register is assigned a byte address m[0], m[1], m[2], etc.
-    
+---
+![doublewrdallocation](https://github.com/akul-star/RISC-V/assets/75561390/70497c4a-948c-49d9-bc79-2c9cd56ddd29)
+
+From the figure, we can observe that the 64 bit data has been uploaded using the little-endian method. In a little-endian architecture, the least significant byte (LSB) of a multi-byte data item is stored at the lowest memory address, while the most significant byte (MSB) is stored at the highest memory address. RISC-V is a little-endian architecture, which means that when loading a 64-bit data value into registers, you need to consider the byte order in memory.
+
+- Address of 1st doubleword = m[0]
+- Address of 2nd doubleword = m[7]
+- Address of 1st doubleword = m[15]
+- Address of 1st doubleword = m[23]
+And so on.....
+  
+
 
 ## References
