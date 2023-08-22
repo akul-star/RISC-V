@@ -437,3 +437,10 @@ In past LAB sessions, we wrote a C-program to add number from 1 to n. We will mo
 
 
 ## References
+
+- https://github.com/Shant1R/RISC-V.git
+- https://makerchip.com/
+- https://riscv.org/
+- https://inst.eecs.berkeley.edu/
+- https://github.com/riscv/riscv-gnu-toolchain
+- https://github.com/alwinshaju08/RISCV
