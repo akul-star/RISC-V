@@ -80,7 +80,7 @@ source .bashrc
 <details/>
 
  
-## DAY-1: Introduction to RISC-V ISA and GNU compiler toolchain
+  ## DAY-1: Introduction to RISC-V ISA and GNU compiler toolchain
 
 <details> 
  
