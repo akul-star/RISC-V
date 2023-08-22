@@ -507,8 +507,6 @@ loop:
      add   a0,a4,zero   // store final result to reg a0 so that it can be read by main pgm
      ret
 ```
-
-
 </details>
 
 
