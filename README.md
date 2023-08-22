@@ -270,6 +270,7 @@ The program calculates and displays the highest and lowest values representable 
  ## DAY-2: Introduction to ABI and Basic Verification Flow
  
 <summary> Application Binary Interface </summary>
+<details>
 
 When an application wants to perform a task that requires interaction with the operating system, it makes a system call to request the corresponding service. The operating system's kernel then handles the request and performs the requested operation on behalf of the application. Examples of common system calls include opening or closing files, reading or writing data, creating new processes, allocating and freeing memory, and managing input/output devices.
 
@@ -390,5 +391,29 @@ This instruction is used to store a 64-bit data value from a register into memor
 
 ---
 ![storedoubleword](https://github.com/akul-star/RISC-V/assets/75561390/67405938-a97f-4a71-aacd-e7f446a34bcc)
+
+ABI names
+=========
+The instructions we have been operating on signed and unsigned integers are called as Base Integer Instructions (RV64I). So, any CPU core which wants to implement these instructions are called as RV64I CPU core and will need to implement atleast the 47 base integer instructions out of which 3 we have already observed.
+
+
+
+
+In the RISC-V instruction set architecture (ISA), instructions are categorized into several types based on their functionality and operation. The following are the common types of instructions in RISC-V:
+
+1. R-Type Instructions (Register-Type):
+These instructions operate on registers and typically perform arithmetic, logical, or bitwise operations. They take three source registers as operands and store the result in a destination register. Example: add, sub, and, or, xor.
+
+2. I-Type Instructions (Immediate-Type):
+These instructions operate on an immediate value (a constant) and a register. They perform operations like adding an immediate value to a register, loading immediate values into registers, and branching. Example: addi, lw, sw, beq.
+
+3. S-Type Instructions (Store-Type):
+   These instructions store a value from a register into memory at a specified address. They take an immediate offset and two registers (one source and one base) as operands. Example: sb, sh, sw.
+
+
+
+</details>
+
+
 
 ## References
