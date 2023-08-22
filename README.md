@@ -306,6 +306,9 @@ From the figure, we can observe that the 64 bit data has been uploaded using the
 - Address of 1st doubleword = m[15]
 - Address of 1st doubleword = m[23]
 And so on.....
+
+Load Double word Instruction
+===========================
   
 Let's say we want to load m[16] to m[23] double word into the RISC-V register x8. If you want to access this data from the memory you need the first address of that particular memory. Because if you want to reach the memory m[16], you first need the addres of the particular memory. We will store the base address of array M into the rehister x23. (Assume base address (0)dec)
 ```
@@ -326,6 +329,58 @@ So, the instruction ld x8, 16(x23) means:
 "Load a 64-bit data value from memory. Add an offset of 16 bytes to the memory address stored in register x23, and store the loaded value in register x8."
 
 This instruction is used to load a 64-bit data value from memory into a register, and the effective memory address used for the load operation is calculated by adding the offset to the contents of register x23. The loaded data will be stored in register x8.
+
+---
+![loaddoubleword](https://github.com/akul-star/RISC-V/assets/75561390/4c02f38e-ff4c-453b-9dbf-e2127acd88e7)
+
+Add Instruction
+==============
+
+```
+add x8, x24,x8
+```
+
+The instruction add x8, x14, x8 in RISC-V assembly language represents an addition operation. Let's break down what each part of the instruction means:
+
+-  add: This is the opcode mnemonic for the "Add" instruction. It's used to perform addition between two operands and store the result in a destination register.
+
+- x8: This is the destination register where the result of the addition will be stored. In this case, the result will be stored in register x8.
+
+- x14: This is the first source register. It contains one of the operands for the addition.
+
+-  ,: This comma separates the source registers from the destination register in the instruction.
+
+-  x8: This is the second source register. It contains the other operand for the addition.
+
+So, the instruction add x8, x14, x8 means:
+
+"Add the values in registers x14 and x8. Store the result in register x8."
+
+In other words, the value currently stored in register x8 (the second source register) is added to the value in register x14 (the first source register), and the sum is stored back in register x8 (the destination register).
+
+For example, if x14 contains the value 5 and x8 contains the value 10 before the instruction is executed, after executing the add instruction, the value in x8 will be updated to 15, which is the result of adding 5 and 10.
+
+Store Double-word
+=================
+
+```
+sd x8, 8(x23)
+```
+The instruction sd x8, 8(x23) in RISC-V assembly language represents a store operation. Let's break down what each part of the instruction means:
+
+-   sd: This is the opcode mnemonic for the "Store Doubleword" instruction. It's used to store a 64-bit (8-byte) data value from a register into memory.
+
+-   x8: This is the source register containing the data value that you want to store. In this case, the data value to be stored is the contents of register x8.
+
+-   8(x23): This is the memory address where you want to store the data. It consists of two parts:
+        8: This is the offset value. It specifies the distance, in bytes, from the address stored in register x23 to the memory location where you want to store the data.
+        (x23): This refers to the base address register. In this case, x23 holds the base memory address.
+
+So, the instruction sd x8, 8(x23) means:
+
+"Store the 64-bit data value from register x8 into memory. Add an offset of 8 bytes to the memory address stored in register x23, and write the contents of x8 to that memory location."
+
+This instruction is used to store a 64-bit data value from a register into memory. The effective memory address used for the store operation is calculated by adding the offset to the contents of register x23, and the data value in x8 is written to that memory location.
 
 
 
