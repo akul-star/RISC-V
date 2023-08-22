@@ -528,9 +528,6 @@ spike pk custom1_to9.o
 
 <details>
 <summary>Basic Verification Flow using iverilog</summary>
-
-
- 
 </details>
 
 ## References
