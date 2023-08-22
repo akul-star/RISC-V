@@ -285,7 +285,12 @@ Memory Allocation for Doublewords
 =================================
 The RISC-V architecture has only 32 registers with a width of either 32 bit or 64 bit. 
 
+---
+![RISCVreg](https://github.com/akul-star/RISC-V/assets/75561390/073291f8-2a22-4eae-b2c6-6c73c865d83a)
 
+- **XLEN:** The XLEN value specifies the bit width of the integer registers, which in turn determines the maximum size of integer data that the processor can handle natively.
+- In a RISC-V processor with XLEN set to 32, the integer registers would be 32 bits wide, and the processor could perform arithmetic and logical operations on 32-bit integers in a single instruction.
+- In a RISC-V processor with XLEN set to 64, the integer registers would be 64 bits wide, allowing the processor to handle 64-bit integers in a single instruction.
 
 
 
