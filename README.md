@@ -292,6 +292,10 @@ The RISC-V architecture has only 32 registers with a width of either 32 bit or 6
 - In a RISC-V processor with XLEN set to 32, the integer registers would be 32 bits wide, and the processor could perform arithmetic and logical operations on 32-bit integers in a single instruction.
 - In a RISC-V processor with XLEN set to 64, the integer registers would be 64 bits wide, allowing the processor to handle 64-bit integers in a single instruction.
 
+Now let us assume a XLEN 64 bit register. Their are two ways to load a doubleword data into the registers. 
 
+1. Directly loading the 64 bit data to the regsiter of RISC-V.
+2. Using memory registers of 8bit length, we can load 64 bit data using 8 memory registers. Each memory register is assigned a byte address m[0], m[1], m[2], etc.
+    
 
 ## References
