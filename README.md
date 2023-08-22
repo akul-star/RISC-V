@@ -428,8 +428,36 @@ In past LAB sessions, we wrote a C-program to add number from 1 to n. We will mo
 
 - Modified C-program for the summation of 1 to n.
 
-  ```
+```
+  #include <stdio.h>
+extern int load(int x,int y);
+int main()
+ {
+ 	int result = 0;
+	int count =9;
+ 	result = load(0x0,count+1);
+ 	printf("Sum of numbers from 1 to %d is %d\n",count,result);
+ } 
+   
+```
+- Code for the load file. It is saved as load.S with an extension of **.S**. An **.s** file is a text file that contains assembly language source code. Assembly language is a low-level programming language that is closely related to the machine code instructions executed by a computer's CPU. Each line of an assembly language program typically corresponds to a single machine code instruction.
+```
+.section .text
+.global load
+.type load, @function
 
+load: 
+     add   a4,a0,zero    //initialize sum register a4 with 0x0
+     add   a2,a0,a1      //store count of 10 in reg a. reg a1 is loaded with 0xa(decimal 10) from main
+     add   a3,a0,zero    //initialize intermediate sum reg a3 by 0x0
+
+loop:
+ add   a4,a3,a4     // Incremental addition
+     addi  a3,a3,1      // Increment intermediate register by 1
+     blt   a3,a2,loop   // If a3 is less than a2,branch to label <loop> 
+     add   a0,a4,zero   // store final result to reg a0 so that it can be read by main pgm
+     ret
+```
 
 
 </details>
@@ -441,6 +469,7 @@ In past LAB sessions, we wrote a C-program to add number from 1 to n. We will mo
 - https://github.com/Shant1R/RISC-V.git
 - https://makerchip.com/
 - https://riscv.org/
+- https://github.com/mrdunker/RISC-V_based_MYTH_IIITB.git
 - https://inst.eecs.berkeley.edu/
 - https://github.com/riscv/riscv-gnu-toolchain
 - https://github.com/alwinshaju08/RISCV
