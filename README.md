@@ -265,6 +265,7 @@ The program calculates and displays the highest and lowest values representable 
 ---
 ![Signedmaxmin](https://github.com/akul-star/RISC-V/assets/75561390/08f170b4-3dad-4fbb-82b3-2b523667655a)
 
+</details>
 
  ## DAY-2: Introduction to ABI and Basic Verification Flow
  
