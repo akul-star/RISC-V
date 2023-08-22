@@ -34,7 +34,7 @@ RISC-V (pronounced "risk-five") is an open-source instruction set architecture (
 
 <details>
 
-<summary> Tool Installation </summary>
+<summary>Tool Installation</summary>
 
 ---
 - Install the dependencies using the following command :
@@ -84,7 +84,7 @@ source .bashrc
 
 <details> 
  
- <summary> INTRODUCTION  </summary>
+ <summary>INTRODUCTION </summary>
   
   ---
   In this section we will learn what exactly is the Instruction Set Architecture (ISA) role in a device and why it is required.  
