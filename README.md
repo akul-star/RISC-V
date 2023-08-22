@@ -273,6 +273,7 @@ The program calculates and displays the highest and lowest values representable 
 <details> 
 <summary> Application Binary Interface </summary>
 
+---
 When an application wants to perform a task that requires interaction with the operating system, it makes a system call to request the corresponding service. The operating system's kernel then handles the request and performs the requested operation on behalf of the application. Examples of common system calls include opening or closing files, reading or writing data, creating new processes, allocating and freeing memory, and managing input/output devices.
 
 - User ISA (Instruction Set Architecture): This is the set of instructions visible to application programmers and software developers. It defines the operations and data manipulation capabilities that application-level programs can use. User ISA provides a higher-level abstraction, allowing programmers to write software without needing to understand the underlying hardware details. Common examples of user-level instructions include arithmetic operations, memory access, branching, and more. Different processors or CPUs from various manufacturers might have different user ISAs, which can affect the compatibility of software across different systems.
