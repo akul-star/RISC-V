@@ -307,6 +307,26 @@ From the figure, we can observe that the 64 bit data has been uploaded using the
 - Address of 1st doubleword = m[23]
 And so on.....
   
+Let's say we want to load m[16] to m[23] double word into the RISC-V register x8. If you want to access this data from the memory you need the first address of that particular memory. Because if you want to reach the memory m[16], you first need the addres of the particular memory. We will store the base address of array M into the rehister x23. (Assume base address (0)dec)
+```
+ld x8, 16(x23)
+```
+The assembly instruction ld x8, 16(x23) in RISC-V represents a load operation. Let's break down what each part of the instruction means:
+
+- ld: This is the opcode mnemonic for the "Load Doubleword" instruction. It's used to load a 64-bit (8-byte) data value from memory into a register.
+
+- x8: This is the destination register where the loaded 64-bit data value will be stored. In this case, the destination register is x8.
+
+- 16(x23): This is the memory address where the data will be loaded from. It consists of two parts:
+        - 16: This is the offset value. It specifies the distance, in bytes, from the address stored in register x23 to the memory location you want to load from.
+        - (x23): This refers to the base address register. In this case, x23 holds the base memory address.
+
+So, the instruction ld x8, 16(x23) means:
+
+"Load a 64-bit data value from memory. Add an offset of 16 bytes to the memory address stored in register x23, and store the loaded value in register x8."
+
+This instruction is used to load a 64-bit data value from memory into a register, and the effective memory address used for the load operation is calculated by adding the offset to the contents of register x23. The loaded data will be stored in register x8.
+
 
 
 ## References
