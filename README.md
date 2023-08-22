@@ -419,8 +419,16 @@ ABI names refer to the Application Binary Interface names used in the context of
 
 <details> 
 <summary> Lab work using ABI function calls </summary>
+
+---
 In past LAB sessions, we wrote a C-program to add number from 1 to n. We will modify the C-program to make some function call's to the assembly language in the RISC-V ISA  and then do some computation and finally send the final results back to the main program.
 
+---
+![ABIcprogramalgo](https://github.com/akul-star/RISC-V/assets/75561390/24d5dc63-2c19-4eec-8520-9dd1fbc4681a)
+
+- Modified C-program for the summation of 1 to n.
+
+  ```
 
 
 
