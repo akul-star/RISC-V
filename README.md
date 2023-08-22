@@ -268,9 +268,10 @@ The program calculates and displays the highest and lowest values representable 
 </details>
 
  ## DAY-2: Introduction to ABI and Basic Verification Flow
- 
+
+
+<details> 
 <summary> Application Binary Interface </summary>
-<details>
 
 When an application wants to perform a task that requires interaction with the operating system, it makes a system call to request the corresponding service. The operating system's kernel then handles the request and performs the requested operation on behalf of the application. Examples of common system calls include opening or closing files, reading or writing data, creating new processes, allocating and freeing memory, and managing input/output devices.
 
@@ -411,7 +412,6 @@ These instructions operate on an immediate value (a constant) and a register. Th
 ![riscvABIname](https://github.com/akul-star/RISC-V/assets/75561390/56f550e0-4dac-4805-9f36-aaed77e054ce)
 
 ABI names refer to the Application Binary Interface names used in the context of the RISC-V architecture. The RISC-V ABI defines conventions and rules that govern how functions are called and how data is passed between different parts of a software system, such as between different parts of a program or between a program and its libraries.
-
 
 
 </details>
