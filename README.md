@@ -515,8 +515,12 @@ riscv64-unknown-elf-objdump -d custom1_to9.o | less
 spike pk custom1_to9.o
 ```
 - Output will be as shown below.
-  
 
+---
+![1to9_custom_output](https://github.com/akul-star/RISC-V/assets/75561390/c76ed767-7772-48b6-b045-1bd498e99cbe)  
+
+- The disassembled code will look like as shown below.
+  
 
 </details>
 
