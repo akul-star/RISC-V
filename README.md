@@ -269,8 +269,7 @@ The program calculates and displays the highest and lowest values representable 
 
  ## DAY-2: Introduction to ABI and Basic Verification Flow
  
- Application Binary Interface
- =============================
+<summary> Application Binary Interface </summary>
 
 When an application wants to perform a task that requires interaction with the operating system, it makes a system call to request the corresponding service. The operating system's kernel then handles the request and performs the requested operation on behalf of the application. Examples of common system calls include opening or closing files, reading or writing data, creating new processes, allocating and freeing memory, and managing input/output devices.
 
