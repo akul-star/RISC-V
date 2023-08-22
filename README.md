@@ -75,7 +75,7 @@ export PATH="/home/akul-sinha/riscv_toolchain/riscv64-unknown-elf-gcc-8.3.0-2019
 # close the bashrc and type in terminal
 source .bashrc
 ```
-<details/>
+</details>
 
 
 ## DAY-1: Introduction to RISC-V ISA and GNU compiler toolchain
