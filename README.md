@@ -25,7 +25,7 @@ RISC-V (pronounced "risk-five") is an open-source instruction set architecture (
 
 
 ## Table of Content
-- [Day-0: 
+- Day-0: 
 - Day-1:
 
 
@@ -33,8 +33,7 @@ RISC-V (pronounced "risk-five") is an open-source instruction set architecture (
 ## DAY-0: Installation of the Tools
 
 <details>
-
-<summary>Tool Installation</summary>
+  <summary>Tool Installation</summary>
 
 ---
 - Install the dependencies using the following command :
@@ -76,7 +75,6 @@ export PATH="/home/akul-sinha/riscv_toolchain/riscv64-unknown-elf-gcc-8.3.0-2019
 # close the bashrc and type in terminal
 source .bashrc
 ```
-
 <details/>
 
 
