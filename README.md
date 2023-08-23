@@ -540,7 +540,12 @@ Let's download the PicoRV32 CPU core on which we will fo our ecperiments through
 ```
 git clone https://github.com/kunalg123/riscv-workshop-collaterals.git
 ```
-In this lab, we are basically going to generate a hex file and a bitstream of the same code done above.We run the below code to generate the same.
+In this lab, we are basically going to generate a hex file and a bitstream of the same code done above.We run the below code to generate the same. For the demo, go to the lab directory using the command givem below.
+```
+cd ~/riscv_workshop_collaterals/labs/
+chmod 777 rv32im.sh
+./rv32im.sh  # Contains necessary commands to convert C to hex
+```
 
 
 </details>
