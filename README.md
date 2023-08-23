@@ -576,7 +576,18 @@ In this part of the workshop, we are going to look at:
 Logic Gates
 ===========
 Logic gates are fundamental building blocks of digital circuits that perform logical operations on one or more binary inputs and produce a single binary output. These gates form the basis of digital electronics and are used to design complex digital circuits, such as CPUs, memory units, and more. There are several basic types of logic gates, each with its own truth table describing its behavior.
- 
+
+--- 
+![logicgates](https://github.com/akul-star/RISC-V/assets/75561390/78176b8d-7499-4673-80fd-4229ee92568c)
+
+These basic logic gates can be combined in various ways to create more complex logic functions. In digital circuit design, logic gates are used to perform operations and implement functions that process binary signals, which form the basis of digital computing and modern electronics.
+
+Boolean Operators
+==================
+
+Boolean operators, also known as logical operators, are symbols used in Boolean algebra and programming to combine and manipulate logical values (true or false). These operators allow you to create more complex logical expressions by combining simpler ones. There are three primary Boolean operators: AND, OR, and NOT. 
+
+
 </details>
 
 
