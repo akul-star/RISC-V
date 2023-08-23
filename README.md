@@ -528,6 +528,13 @@ spike pk custom1_to9.o
 
 <details>
 <summary>Basic Verification Flow using iverilog</summary>
+
+---
+Now we will learn how to run the same C-Program on the RISC-V CPU. The idea is to have this this RISC-V CPU to do labs written in verilog. We will write Testbench and load the Hex file of the C-program and load it in the memory. The CPU core will process the contents of the memory and display the output. For this LAB, we will use a RISC-V CPU core known as PicoRV32. PicoRV32 is an open-source RISC-V CPU core that is designed to be small, simple, and easily synthesizable for FPGA (Field-Programmable Gate Array) implementations. It is an implementation of the RISC-V instruction set architecture (ISA) and is often used as a building block for creating custom RISC-V-based processors in FPGA projects.
+
+
+
+
 </details>
 
 ## References
