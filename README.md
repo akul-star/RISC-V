@@ -587,6 +587,9 @@ Boolean Operators
 
 Boolean operators, also known as logical operators, are symbols used in Boolean algebra and programming to combine and manipulate logical values (true or false). These operators allow you to create more complex logical expressions by combining simpler ones. There are three primary Boolean operators: AND, OR, and NOT. 
 
+---
+![boolean ](https://github.com/akul-star/RISC-V/assets/75561390/df8add98-fb6e-4aca-9755-04096abaad22)
+These Boolean operators are fundamental tools for creating logical expressions and controlling the flow of programs in programming languages. They are used extensively in conditional statements (if, else, switch), loop conditions (while, for), and more. By combining these operators, you can create complex logical expressions that allow your code to make decisions and perform actions based on different conditions.
 
 </details>
 
