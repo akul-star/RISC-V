@@ -547,6 +547,17 @@ chmod 777 rv32im.sh
 ./rv32im.sh  # Contains necessary commands to convert C to hex
 ```
 
+---
+![contents](https://github.com/akul-star/RISC-V/assets/75561390/f873dfd4-1b0f-4748-808a-b6f8b104497a)
+The file firmware.hex is the hex file and firmware32.hex is the bitstream generated.
+The below file is firmware.hex.
+
+---
+
+
+
+
+
 
 </details>
 
