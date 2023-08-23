@@ -556,13 +556,33 @@ The below file is firmware.hex.
 
 ![firmwareghex](https://github.com/akul-star/RISC-V/assets/75561390/08e20701-a1d9-4506-86ab-dfe16d30e57f)
 
+</details>
+
 
 ## Day-3: Digital Logic with TL Logic & Makerchip
 
+<details>
+  <summary> Introduction </summary>
 
+In this part of the workshop, we are going to look at:
 
+- Logic gates
+- MakerChip platform(IDE)
+- Combinational Logic
+- Sequential Logic
+- Piplining logic
+- Slate
 
+Logic Gates
+===========
+Logic gates are fundamental building blocks of digital circuits that perform logical operations on one or more binary inputs and produce a single binary output. These gates form the basis of digital electronics and are used to design complex digital circuits, such as CPUs, memory units, and more. There are several basic types of logic gates, each with its own truth table describing its behavior.
+ 
 </details>
+
+
+
+
+
 
 ## References
 
