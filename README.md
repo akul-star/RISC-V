@@ -598,12 +598,11 @@ Basic Mux Implementation And Introduction To [Makerchip](https://makerchip.com/)
 
 Makerchip is an online platform that provides an integrated development environment (IDE) for digital design and verification using SystemVerilog and TL Verilog. It allows engineers, students, and enthusiasts to design and simulate digital circuits, develop RTL (Register Transfer Level) code, and explore hardware design concepts without requiring the local installation of tools. TL-Verilog was used as the HDL of choice for this project. Projects on Makerchip can be completely designed using TL-Verilog. Transaction Level - Verilog standard is an extension of Verilog which has various advantages like simpler syntax, shorter codes and easy pipelining.
 
-
-
-
-
 </details>
-
+<details>
+     <summary>Combinational Circuits</summary>
+ 
+</details>
 
 
 
