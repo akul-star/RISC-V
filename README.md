@@ -557,6 +557,7 @@ The below file is firmware.hex.
 ![firmwareghex](https://github.com/akul-star/RISC-V/assets/75561390/08e20701-a1d9-4506-86ab-dfe16d30e57f)
 
 
+## Day-3: Digital Logic with TL Logic & Makerchip
 
 
 
