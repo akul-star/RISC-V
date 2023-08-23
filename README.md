@@ -612,6 +612,7 @@ Now let us do a bit more of a complex combinational circuit. Let us create the f
 Below shown is a calculator which uses a mux.
 
 ---
+![emil2](https://github.com/akul-star/RISC-V/assets/75561390/edb14a1c-fef1-4b04-8fa8-797adf7101ce)
 
 The code for this here and the output is shown as below.
 
