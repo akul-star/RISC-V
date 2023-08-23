@@ -564,6 +564,7 @@ The below file is firmware.hex.
 <details>
   <summary> Introduction </summary>
 
+---
 In this part of the workshop, we are going to look at:
 
 - Logic gates
@@ -592,6 +593,10 @@ Boolean operators, also known as logical operators, are symbols used in Boolean 
 These Boolean operators are fundamental tools for creating logical expressions and controlling the flow of programs in programming languages. They are used extensively in conditional statements (if, else, switch), loop conditions (while, for), and more. By combining these operators, you can create complex logical expressions that allow your code to make decisions and perform actions based on different conditions.
 
 </details>
+
+Basic Mux Implementation And Introduction To [Makerchip] (https://makerchip.com/)
+======================================================
+
 
 
 
