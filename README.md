@@ -594,7 +594,7 @@ These Boolean operators are fundamental tools for creating logical expressions a
 
 
 
-Basic Mux Implementation And Introduction To [Makerchip] (https://makerchip.com/)
+Basic Mux Implementation And Introduction To [Makerchip](https://makerchip.com/)
 ======================================================
 
 </details>
