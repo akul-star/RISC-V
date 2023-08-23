@@ -601,7 +601,23 @@ Makerchip is an online platform that provides an integrated development environm
 </details>
 <details>
      <summary>Combinational Circuits</summary>
- 
+ For this, I have started with a basic inverter logic program, logical operations and a multi-bit mux program. Here we are using Transitional Level Verilog(TL-V), which is quite different from standard verilog code, syntax varies quite a bit. There is no need to declare $out and $in unlike Verilog. There is also no need to assign $in. A random stimulus is provided, and a warning is produced.
+
+Attaching output of the inverter in Makerchip IDE for reference:
+
+---
+
+Now let us do a bit more of a complex combinational circuit. Let us create the following circuit.
+Below shown is a calculator which uses a mux.
+
+---
+
+The code for this here and the output is shown as below.
+
+---
+
+
+
 </details>
 
 
