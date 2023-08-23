@@ -606,6 +606,7 @@ Makerchip is an online platform that provides an integrated development environm
 Attaching output of the inverter in Makerchip IDE for reference:
 
 ---
+![emil1](https://github.com/akul-star/RISC-V/assets/75561390/7384f09d-71e4-4c41-b71b-4c17a7953c1c)
 
 Now let us do a bit more of a complex combinational circuit. Let us create the following circuit.
 Below shown is a calculator which uses a mux.
@@ -615,7 +616,7 @@ Below shown is a calculator which uses a mux.
 The code for this here and the output is shown as below.
 
 ---
-
+![emil3](https://github.com/akul-star/RISC-V/assets/75561390/6d56d365-d3c9-4679-b19e-c201fbd2f040)
 
 
 </details>
