@@ -605,7 +605,14 @@ Implementing MUX using [Makerchip](https://makerchip.com/)
 Different ways to represent Mux is given below.
 
 ---
+![mux0](https://github.com/akul-star/RISC-V/assets/75561390/4b2527a3-443a-43cf-9665-cda35d7e781e)
 
+- The verilog syntax can simply be given as,
+```
+assign f= s ? X1 : X2;
+```
+- A 4x1 MUX given below.
+  
 
 
 
