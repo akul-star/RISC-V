@@ -592,6 +592,7 @@ Boolean operators, also known as logical operators, are symbols used in Boolean 
 ![boolean ](https://github.com/akul-star/RISC-V/assets/75561390/df8add98-fb6e-4aca-9755-04096abaad22)
 These Boolean operators are fundamental tools for creating logical expressions and controlling the flow of programs in programming languages. They are used extensively in conditional statements (if, else, switch), loop conditions (while, for), and more. By combining these operators, you can create complex logical expressions that allow your code to make decisions and perform actions based on different conditions.
 
+</details>
 
 <details>
 	<summary> Basic Mux Implementation And Introduction To [Makerchip](https://makerchip.com/) </summary>
@@ -603,6 +604,7 @@ Makerchip is an online platform that provides an integrated development environm
 
 
 <details>
+
 <summary>Combinational Circuits</summary>
 
 ---
