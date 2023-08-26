@@ -600,6 +600,9 @@ These Boolean operators are fundamental tools for creating logical expressions a
 ---
 [Makerchip](https://makerchip.com/): Makerchip is an online platform that provides an integrated development environment (IDE) for digital design and verification using SystemVerilog and TL Verilog. It allows engineers, students, and enthusiasts to design and simulate digital circuits, develop RTL (Register Transfer Level) code, and explore hardware design concepts without requiring the local installation of tools. TL-Verilog was used as the HDL of choice for this project. Projects on Makerchip can be completely designed using TL-Verilog. Transaction Level - Verilog standard is an extension of Verilog which has various advantages like simpler syntax, shorter codes and easy pipelining.
 
+TL-Verilog: Transaction-Level Verilog (TL Verilog) is an extension of traditional Verilog, which is a hardware description language used for designing digital systems and circuits. TL Verilog was developed to make hardware design more approachable and efficient, especially for complex and high-level designs. We will be using TL-verilog to design circuits on the Makerchip IDE.
+
+
 Implementing MUX using [Makerchip](https://makerchip.com/)
 ==========================================================
 - Different ways to represent Mux is given below.
@@ -635,7 +638,7 @@ LAB: Makerchip Platform
 =======================
 
 ---
-1. Loading Pythagorean Example on Makerchip IDE:
+**1. Loading Pythagorean Example on Makerchip IDE:**
 
 ![Pythagorean](https://github.com/akul-star/RISC-V/assets/75561390/7fad9307-1eae-4213-87fb-9a4fd84fab21)
     
@@ -648,23 +651,13 @@ LAB: Makerchip Platform
 <summary>Combinational Circuits</summary>
 
 ---
-For this, I have started with a basic inverter logic program, logical operations and a multi-bit mux program. Here we are using Transitional Level Verilog(TL-V), which is quite different from standard verilog code, syntax varies quite a bit. There is no need to declare $out and $in unlike Verilog. There is also no need to assign $in. A random stimulus is provided, and a warning is produced.
+In this section we will try to implement basic devices like inverter, GATE's, etc, on the Makerchip IDE.
 
-Attaching output of the inverter in Makerchip IDE for reference:
-
----
-![emil1](https://github.com/akul-star/RISC-V/assets/75561390/7384f09d-71e4-4c41-b71b-4c17a7953c1c)
-
-Now let us do a bit more of a complex combinational circuit. Let us create the following circuit.
-Below shown is a calculator which uses a mux.
-
----
-![emil2](https://github.com/akul-star/RISC-V/assets/75561390/edb14a1c-fef1-4b04-8fa8-797adf7101ce)
-
-The code for this here and the output is shown as below.
-
----
-![emil3](https://github.com/akul-star/RISC-V/assets/75561390/6d56d365-d3c9-4679-b19e-c201fbd2f040)
+**2. INVERTER**
+The TL-verilog code for Inverter is shown below:
+```
+$in = !$out
+```
 
 
 </details>
