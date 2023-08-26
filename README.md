@@ -658,6 +658,8 @@ The TL-verilog code for Inverter is shown below:
 ```
 $in = !$out
 ```
+---
+![TLV-inverter](https://github.com/akul-star/RISC-V/assets/75561390/ffe2e7be-8c48-4caf-81c7-f604f2e800ff)
 
 
 </details>
