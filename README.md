@@ -602,7 +602,7 @@ These Boolean operators are fundamental tools for creating logical expressions a
 
 Implementing MUX using [Makerchip](https://makerchip.com/)
 ==========================================================
-Different ways to represent Mux is given below.
+- Different ways to represent Mux is given below.
 
 ---
 ![mux0](https://github.com/akul-star/RISC-V/assets/75561390/4b2527a3-443a-43cf-9665-cda35d7e781e)
@@ -612,6 +612,7 @@ Different ways to represent Mux is given below.
 assign f= s ? X1 : X2;
 ```
 - A 4x1 MUX given below.
+
   ![MUX1](https://github.com/akul-star/RISC-V/assets/75561390/af6e81f8-68d5-4631-ba5c-f69ca84f438a)
 
 - The verilog syntax can be given as,
