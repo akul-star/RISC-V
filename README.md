@@ -535,12 +535,12 @@ Now we will learn how to run the same C-Program on the RISC-V CPU. The idea is t
 ---
 ![LAB-Risc_VCPUcore](https://github.com/akul-star/RISC-V/assets/75561390/7025f67c-35fd-4854-8739-663d3d0347b1)
 
-Let's download the PicoRV32 CPU core on which we will fo our ecperiments through. 
+Let's download the PicoRV32 CPU core on which we will do our experiments through. 
 
 ```
 git clone https://github.com/kunalg123/riscv-workshop-collaterals.git
 ```
-In this lab, we are basically going to generate a hex file and a bitstream of the same code done above.We run the below code to generate the same. For the demo, go to the lab directory using the command givem below.
+In this lab, we are basically going to generate a hex file and a bitstream of the same code done above. We run the below code to generate the same. For the demo, go to the lab directory using the command givem below.
 ```
 cd ~/riscv_workshop_collaterals/labs/
 chmod 777 rv32im.sh
