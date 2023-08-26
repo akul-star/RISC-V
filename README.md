@@ -633,8 +633,11 @@ assign f= s ? X1 : X2;
 
 LAB: Makerchip Platform
 =======================
+
+---
 1. Loading Pythagorean Example on Makerchip IDE:
 
+![Pythagorean](https://github.com/akul-star/RISC-V/assets/75561390/7fad9307-1eae-4213-87fb-9a4fd84fab21)
     
 
 </details>
