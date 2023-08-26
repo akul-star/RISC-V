@@ -392,15 +392,15 @@ add x8, x24,x8
 
 The instruction add x8, x14, x8 in RISC-V assembly language represents an addition operation. Let's break down what each part of the instruction means:
 
--  add: This is the opcode mnemonic for the "Add" instruction. It's used to perform addition between two operands and store the result in a destination register.
+- add: This is the opcode mnemonic for the "Add" instruction. It's used to perform addition between two operands and store the result in a destination register.
 
 - x8: This is the destination register where the result of the addition will be stored. In this case, the result will be stored in register x8.
 
 - x14: This is the first source register. It contains one of the operands for the addition.
 
--  ,: This comma separates the source registers from the destination register in the instruction.
+- ,: This comma separates the source registers from the destination register in the instruction.
 
--  x8: This is the second source register. It contains the other operand for the addition.
+- x8: This is the second source register. It contains the other operand for the addition.
 
 So, the instruction add x8, x14, x8 means:
 
