@@ -488,7 +488,7 @@ int main()
    
 ```
 
-- Code for the load file. It is saved as load.S with an extension of **.S**. An **.s** file is a text file that contains assembly language source code. Assembly language is a low-level programming language that is closely related to the machine code instructions executed by a computer's CPU. Each line of an assembly language program typically corresponds to a single machine code instruction.
+- Code for the load file. It is saved as load.S with an extension of **.S**. A **.s** file is a text file that contains assembly language source code. Assembly language is a low-level programming language that is closely related to the machine code instructions executed by a computer's CPU. Each line of an assembly language program typically corresponds to a single machine code instruction.
 
 ```
 .section .text
