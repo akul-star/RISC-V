@@ -759,6 +759,7 @@ The TL-verilog code is given below
 
 <details>
   <summary> Pipelined Logic </summary>
+
 ---
 Pipelined logic, often referred to as pipelining, is a technique used in digital circuit design and computer architecture to improve the overall performance and throughput of a system. It involves breaking down a complex task or computation into a sequence of smaller stages, with each stage being handled by a dedicated hardware unit. This enables multiple stages of the computation to be processed simultaneously, resulting in higher efficiency and faster processing.
  
