@@ -844,6 +844,15 @@ The TL-verilog code is given below:
          $out[31:0] = ($reset | ~($valid))  ? 32'h0 : ($op[1] ? ($op[0] ? $div : $prod):($op[0] ? $diff : $sum));
 ```
 The output observed in Makerchi IDE:
+![2_calc_op](https://github.com/akul-star/RISC-V/assets/75561390/051db2a1-7732-4347-a7d0-96b066d47d03)
+
+</details>
+
+<details>
+	<summary> Validity </summary>
+---
+First, we shall see a distance accumulator coupled with a Pythagorean pipeline as shown below. 
+
 
 </details>
 
