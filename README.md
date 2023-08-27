@@ -694,6 +694,7 @@ This circuit implements a calculator that can perform addition, substraction, mu
    $prod[31:0] = $val1*$val2;
    $div[31:0] = $val1/$val2;
 ```
+![combcal_makerchip](https://github.com/akul-star/RISC-V/assets/75561390/7ac262bd-5aa5-4c84-b38b-dbf638d02fe9)
 
 
 </details>
