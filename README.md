@@ -1168,7 +1168,286 @@ PC Logic Implementation
 
 In RISC-V, the Program Counter (PC) is a special-purpose register that holds the memory address of the next instruction to be fetched and executed. The PC is also commonly referred to as the instruction pointer (IP) in other architectures. The PC is a crucial component of the processor's control flow, as it determines the sequence of instructions that are fetched and executed.
 
+- Logic Diagram for PC
+![PC_LD](https://github.com/akul-star/RISC-V/assets/75561390/ed17f42b-5022-4af3-967c-aec1a016ba27)
+
+
+- 32 bit PC has to be reset to 0 is the previous instruction was reset
+- The PC increment has to be done with steps of each instruction, ie, 32'b4 increment needed.
+- TLverilog code implementation for the same
+```
+|cpu
+      @0
+         $reset = *reset;
+         $pc[31:0] = >>1$reset ? 32'b0 : >>1$pc + 32'd4;
+```      
+- Implementation on Makerchip IDE
+![PC_LD_OP](https://github.com/akul-star/RISC-V/assets/75561390/2ba76d74-5f09-4fc1-843d-10c576d4f5c7)
+
+
+Fetch Logic Implementation
+==========================
+
+During the fetch stage, processors fetches the instruction from the memory to the address pointed by the program counter. The program counters holds the address of the next stage, in our case it is after 4 cycle and the instruction memory holds the set of instruction to be executed.  
+
+- Logic diagram of Fetch.
+
+![Logicdiagramfetch](https://github.com/akul-star/RISC-V/assets/75561390/2b5c6fea-dc8e-495b-94d2-3cf7b3c67921)
+
+- TL-verilog code for implemtation.
+
+```
+|cpu
+      @0
+         $reset = *reset;
+         $pc[31:0] = >>1$reset ? 32'b0 : >>1$pc + 32'd4;
+
+// Assert these to end simulation (before Makerchip cycle limit).
+*passed = *cyc_cnt > 40;
+*failed = 1'b0;
+
+|cpu
+      m4+imem(@1)    // Args: (read stage)
+
+m4+cpu_viz(@4)
+```
+- Implementation of Fetch Logic on Makerchip along with Diagram and Visualisation.
+
+  ![fetch_Makerchip](https://github.com/akul-star/RISC-V/assets/75561390/5b1ab356-25cd-46c1-bc90-e244191449ff)
+
+
+- The current implementations have errors such as the variables are not being used.
+- Fetch Logic to be implemented
+
+![fetchlogic](https://github.com/akul-star/RISC-V/assets/75561390/6545b478-ea5d-4eb0-847c-84c9420206fd)
+
+- TL-verilog code:
+```
+@0
+         $reset = *reset;
+         $pc[31:0] = >>1$reset ? 32'b0 : >>1$pc + 32'd4;
+      @1
+         $imem_rd_addr[M4_IMEM_INDEX_CNT-1:0] = $pc[M4_IMEM_INDEX_CNT+1:2];
+         $imem_rd_en = !$reset;
+         $instr[31:0] = $imem_rd_data[31:0];
+      
+      ?$imem_rd_en
+         @1
+            $imem_rd_data[31:0] = /imem[$imem_rd_addr]$instr;  
+```
+- Final implementation of Fetch Logic
+
+![fetchlogic_Makerchip](https://github.com/akul-star/RISC-V/assets/75561390/b737f564-3da6-4a54-a5c0-ac66ce14b8ec)
+
+Decode Logic Implementation
+============================
+
+Under this section, we look into how to decode the instruction code we fetched from memory.
+
+- Logic Diagram for Decode stage.
+
+![decode_logic](https://github.com/akul-star/RISC-V/assets/75561390/a70e656f-6428-49c0-bbb4-fb2d91e36a38)
+
+Before moving on to Decode logic implementation, it is important to understand how the instruction set and opcode are defined in RISC-V. We have dicussed before the different types of the instruction types. The various types of instrutcion types are summarised in the table along with the binary code. There are 6 instructions type in RISC-V :
+
+- Register (R) type
+- Immediate (I) type
+- Store (S) type
+- Branch (B) type
+- Upper immediate (U) type
+- Jump (J) type
+
+![instructiontypes](https://github.com/akul-star/RISC-V/assets/75561390/0f52cef8-665d-4eba-a480-86014daabf1a)
+
+- Code to determine the type of instruction fetched-
+```
+@1
+         $is_i_instr = $instr[6:2] ==? 5'b0000x || 
+                       $instr[6:2] ==? 5'b001x0 || 
+                       $instr[6:2] == 5'b11001;
+         $is_r_instr = $instr[6:2] ==? 5'b011x0 || 
+                       $instr[6:2] == 5'b01011 || 
+                       $instr[6:2] == 5'b10100;
+         $is_s_instr = $instr[6:2] ==? 5'b0100x;
+         $is_b_instr = $instr[6:2] ==? 5'b11000;
+         $is_j_instr = $instr[6:2] ==? 5'b11011;
+         $is_u_instr = $instr[6:2] ==? 5'b0x101;
+```
+
+
+- Now we look into how to determine the immediate field from the instruction fetched.
+
+- The table explains the contruct of the imm using the various immediate bits from instr.
+---
+![imm using the various immediate bits from instr](https://github.com/akul-star/RISC-V/assets/75561390/e1167034-cb79-4dc3-8afe-a99a5e2806b6)
+
+- Code to determine imm for decode logic implementation.
+```
+$imm[31:0] = $is_i_instr ? {{21{$instr[31]}}, $instr[30:20]} :
+	     $is_s_instr ? {{21{$instr[31]}}, $instr[30:25], $instr[11:7]} :
+	     $is_b_instr ? {{20{$instr[31]}}, $instr[7], $instr[30:25], $instr[11:8], 1'b0} :
+	     $is_j_instr ? {{12{$instr[31]}}, $instr[19:12], $instr[20], $instr[30:21], 1'b0} :
+	     $is_u_instr ? {$instr[31:12], 12'b0} :
+	     32'b0;
+```
+- Now, we will extract the other fields from the instr fetched, using the table below, which explains the construct of the 32 bits instructions in RISC-V.
+---
+![32bitinstructions](https://github.com/akul-star/RISC-V/assets/75561390/9a47970c-ceeb-4e2b-a96d-c77871b03f6e)
+
+
+- While determining the other fields, we will create valid fields so that we generate the field only for the type of instructions it is required.
+
+- Code to determine the rest of the feilds.
+```
+	$opcode[6:0] = $instr[6:0];
+         
+         $funct7_valid = $is_r_instr ;
+         ?$funct7_valid
+            $funct7[6:0] = $instr[31:25];
+            
+         $funct3_valid = $is_r_instr || $is_i_instr || $is_s_instr || $is_b_instr;
+         ?$funct3_valid
+            $funct3[2:0] = $instr[14:12];
+         
+         $rs1_valid = $is_r_instr || $is_i_instr || $is_s_instr || $is_b_instr;
+         ?$rs1_valid
+            $rs1[4:0] = $instr[19:15];
+         
+         $rs2_valid = $is_r_instr || $is_s_instr || $is_b_instr;
+         ?$rs2_valid
+            $rs2[4:0] = $instr[24:20];
+         
+         $rd_valid = $is_r_instr || $is_i_instr || $is_u_instr || $is_j_instr;
+         ?$rd_valid
+            $rd[4:0]  = $instr[11:7];
+  ```
+- Now, we will determine the individual instructions as per our need.
+---
+![individual_instructions](https://github.com/akul-star/RISC-V/assets/75561390/71842967-42d7-46d7-a981-47117c08582a)
+
+- Code to determine the individual instructions highlightened.
+```
+	 $dec_bits [10:0] = {$funct7[5], $funct3, $opcode};
+
+     	 $is_beq = $dec_bits ==? 11'bx_000_1100011;
+         $is_bne = $dec_bits ==? 11'bx_001_1100011;
+         $is_blt = $dec_bits ==? 11'bx_100_1100011;
+         $is_bge = $dec_bits ==? 11'bx_101_1100011;
+         $is_bltu = $dec_bits ==? 11'bx_110_1100011;
+         $is_bgeu = $dec_bits ==? 11'bx_111_1100011;
+         $is_addi = $dec_bits ==? 11'bx_000_0010011;
+         $is_add = $dec_bits ==? 11'b0_000_0110011;
+         `BOGUS_USE($is_beq $is_bne $is_blt $is_bge $is_bltu $is_bgeu $is_addi $is_add)
+```
+- We give `BOGUS_USE to inform the complier that even if the variables listed are not consumed, not to throw a warning. It is not a fatel warning, yet this avoid the clutter in the log section.
+
+- Implementation of the complete Decode Logic over Makerchip IDE.
+---
+![completeDecodelogic_OP](https://github.com/akul-star/RISC-V/assets/75561390/43c65929-e40e-44cd-9467-58923d374024)
+
 </details>
+
+
+<details> 
+      <summary> RISC-VLogic Control </summary>
+---
+Under this section, we will look into the implementation of RISC-V CPU from register file read onwards.
+
+Register File Read Implementation
+=================================
+
+- Pipelined Logic diagram for implementation.
+---
+![pipelinedlogic](https://github.com/akul-star/RISC-V/assets/75561390/0d9f6f31-540b-4d6d-bf31-d62677518ffd)
+
+- Structure of the register design for implementation. Two read operations and one write operation to be performed.
+---
+![2read1write](https://github.com/akul-star/RISC-V/assets/75561390/89f0a0d1-03d3-4974-a137-45eba29c4c30)
+
+- Code for implementation.
+```
+  $src1_value[31:0] = $rf_rd_data1;
+  $src2_value[31:0] = $rf_rd_data2;
+```
+- Implementation upto ALU on Makerchip IDE.
+---
+![ALUmakerchip_OP](https://github.com/akul-star/RISC-V/assets/75561390/3babc6b0-e54a-4630-a52e-f125ead0740e)
+
+Register File Write Implementation
+==================================
+Under this we go over the implementation of Write funcction after the ALU has performed.
+
+- Logic Diagram
+---
+![WritefunctionafterALU](https://github.com/akul-star/RISC-V/assets/75561390/61d35d80-8059-4322-9359-95cfe8e3bc7d)
+
+- Code for writing register file.
+```
+	$rf_wr_en = $rd_valid && $rd != 5'b0;
+	$rf_wr_index[4:0] = $rd;
+	$rf_wr_data[31:0] = $result;
+```
+- Implementation on Makerchip IDE.
+---
+![Writefunction_OP](https://github.com/akul-star/RISC-V/assets/75561390/7d995d78-8e92-4504-8af0-d0d625b40c29)
+
+Note--> We will look into arrays under RISC-V.
+
+- Arrays are collection of data of same datatypes.
+- RISC-V processors support arrays through their memory access instructions and addressing modes. In the RISC-V architecture, arrays are commonly managed using a combination of memory locations and registers.
+- Arrays are represented as contiguous blocks of memory in RISC-V.
+- Pointers are used to track the memory address where the array starts.
+- Arrays are accessed using pointers and offsets calculated from the index and element size.
+- Load and store instructions are used to manipulate array elements.
+- Pointer arithmetic involves adding offsets to pointers for accessing different elements.
+- Pointers are initialized with the memory address of the array's first element.
+- Array operations are performed through load-store instructions and pointer manipulation.
+
+Branch Instruction Implementation
+===============================
+We will look into the implementations for the various branch instructions, we have decoded earlier.
+
+- Logic Diagram
+---
+![branchinstructionlogic](https://github.com/akul-star/RISC-V/assets/75561390/02f6fec0-7200-4f12-bd73-60ac61cc6732)
+
+- All instr with B initials are branch statements. Logic for the branches are as follows.
+---
+![logicforbranches](https://github.com/akul-star/RISC-V/assets/75561390/31aa6bb0-a981-4b2c-8892-8213d5e56cc2)
+
+- Code for implementing when to take a branch.
+```
+$br_target_pc[31:0] = $pc + $imm;
+```
+
+- Now, we will look into how to figure out where to branch to.
+- Code to determine the path to Branch to
+```
+$br_target_pc[31:0] = $pc + $imm;
+```
+- Makerchip IDE after implementation for branch instructions.
+---
+![Branchinstruction_OP](https://github.com/akul-star/RISC-V/assets/75561390/41425d0f-f825-4094-a02a-39123903867c)
+
+Creating Testbench
+==================
+
+We will now look into how to create a testbench for the functionality of the constructed RISC-V CPU.
+
+- Code for testbench
+
+```
+*passed = |cpu/xreg[10]>>5$value == (1+2+3+4+5+6+7+8+9) ;
+```
+- Implementation of the Testbench on Makerchip IDE
+---
+![Branchinstructions_IDE](https://github.com/akul-star/RISC-V/assets/75561390/b921e8db-a4b2-49f2-b511-dcbb261e047f)
+
+</details>
+
+## Day-5: Complete Pipelined RISC-V CPU Micro-Architecture
+
+
 
 ## References
 
