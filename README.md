@@ -824,6 +824,9 @@ Output in Makerchip:
 **Two-Cycle Calculator**
 
 Block Diagram for Two-cycle calculator:
+![2_cyc_calc](https://github.com/akul-star/RISC-V/assets/75561390/dff11ab8-432b-460c-bd4b-f2f7b6cf8b50)
+
+The TL-verilog code is given below:
 
 
 </details>
