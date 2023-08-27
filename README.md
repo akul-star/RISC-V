@@ -1006,7 +1006,10 @@ Pipeline structure:
 Makerchip IDE output:
 ![pythagoreanmakerchip](https://github.com/akul-star/RISC-V/assets/75561390/d1390bec-26d7-4667-b76b-6fe6fa09de59)
 
-##DAY-4: Basic RISC-V CPU micro-architecture 
+## DAY-4: Basic RISC-V CPU micro-architecture 
+<details>
+	<summary> Introduction to Simple RISC-V Micro-architecture </summary>
+</details>
 
 
 </details>
