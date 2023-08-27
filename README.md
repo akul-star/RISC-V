@@ -1445,6 +1445,7 @@ We will now look into how to create a testbench for the functionality of the con
 ## Day-5: Complete Pipelined RISC-V CPU Micro-Architecture
 <details>
 	<summary> Pipelining the CPU </summary>
+
 ---
 Under this section, we will look into pipelining and its benefits, and pipeline the RISC-V CPU design. We will go over the possible hazards and how to work around to avoid hazards.
 
