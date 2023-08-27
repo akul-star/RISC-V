@@ -802,6 +802,24 @@ The code required for pipelining this logic is given below.
 \SV
    endmodule
 ```
+![pipeline_pyth](https://github.com/akul-star/RISC-V/assets/75561390/6317cfaf-c7a2-4e3f-b656-6d922513c4e2)
+
+**Error Detection Demo**
+The TL-verilog code is given below:
+```
+|comp
+      @1
+         $err1 = $bad_input || $illegeal_op;
+      @3
+         $err2 = $err1 || $over_flow;
+      @6
+         $err3 = $err2 || $div_by_zer0;
+```
+
+Output in Makerchip:
+
+---
+
 
 
 </details>
