@@ -699,7 +699,44 @@ This circuit implements a calculator that can perform addition, substraction, mu
 
 </details>
 
+<details> 
+<summary>Sequential Circuits</summary>
+---
+D-Flipflop: A D flip-flop, also known as a Data or Delay flip-flop, is a fundamental digital electronic circuit component used in sequential logic circuits. It's a type of bistable multivibrator, which means it has two stable states and can store a single bit of data. The primary purpose of a D flip-flop is to store and synchronize data in digital systems.
 
+ Fibonacci Series
+ ================
+ The Fibonacci series is a sequence of numbers in which each number is the sum of the two preceding ones. The series starts with 0 and 1, and each subsequent number is the sum of the previous two. Mathematically, the Fibonacci series can be defined as:
+
+F(0) = 0
+F(1) = 1
+F(n) = F(n-1) + F(n-2) for n > 1
+
+So, the first few terms of the Fibonacci series are: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, and so on.
+
+Here's how the series is built:
+
+- The first term is 0.
+- The second term is 1.
+- The third term is the sum of the first and second terms (0 + 1 = 1).
+- The fourth term is the sum of the second and third terms (1 + 1 = 2).
+- The fifth term is the sum of the third and fourth terms (1 + 2 = 3).
+    And so on...
+
+Implementing a Fibonacci series using D flip-flops involves using two flip-flops to store the current and previous terms of the series. Here's a brief outline of the process:
+
+- Initialize two D flip-flops, one for the "Current" term and one for the "Previous" term.
+- Set the initial values: Current = 0, Previous = 1.
+- Connect the D input of the "Current" flip-flop to the Q output of the "Previous" flip-flop.
+- Use logic gates (e.g., XOR gate) to add the "Current" and "Previous" terms and store the result in another flip-flop temporarily.
+- Connect the output of the temporary flip-flop to the D input of the "Current" flip-flop to update it.
+- Update the "Previous" flip-flop with the previous value of the "Current" flip-flop.
+- Repeat steps 4 to 6 for each term in the series.
+
+This arrangement utilizes flip-flops to store and update the terms of the Fibonacci series, and logic gates to perform the addition operation. The clock input of the flip-flops ensures synchronous updating.
+
+
+</details>
 
 
 ## References
