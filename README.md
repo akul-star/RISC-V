@@ -640,6 +640,7 @@ LAB: Makerchip Platform
 ---
 **1. Loading Pythagorean Example on Makerchip IDE:**
 
+![Pythagorean_0](https://github.com/akul-star/RISC-V/assets/75561390/b2b26e89-aa7d-4edf-9c52-9775f80e94c2)
 ![Pythagorean](https://github.com/akul-star/RISC-V/assets/75561390/7fad9307-1eae-4213-87fb-9a4fd84fab21)
     
 
