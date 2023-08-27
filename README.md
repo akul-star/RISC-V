@@ -987,6 +987,29 @@ The output observed in Makerchip IDE:
 
 </details>
 
+<details>
+	<summary> Wrap-Up </summary>
+
+Conway's Game of Life
+=====================
+
+![Conwaysgameoflife](https://github.com/akul-star/RISC-V/assets/75561390/ff6d6dd8-2b4b-48fe-978e-67b739ca1094)
+
+Pythagorean Theorem
+===================
+
+Pipeline structure:
+![pythagoreantheorem](https://github.com/akul-star/RISC-V/assets/75561390/cbe56151-9c8d-4b57-b262-e415ca93706f)
+
+---
+Makerchip IDE output:
+![pythagoreanmakerchip](https://github.com/akul-star/RISC-V/assets/75561390/d1390bec-26d7-4667-b76b-6fe6fa09de59)
+
+##DAY-4: Basic RISC-V CPU micro-architecture 
+
+
+</details>
+
 ## References
 
 - https://github.com/Shant1R/RISC-V.git
