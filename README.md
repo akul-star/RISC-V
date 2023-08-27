@@ -738,11 +738,13 @@ This arrangement utilizes flip-flops to store and update the terms of the Fibona
 ---
 ![fibonacci_series](https://github.com/akul-star/RISC-V/assets/75561390/8258d6cb-036b-4d46-a314-027f461179a8)
  
- The code required will be given as below.
+The code required will be given as below.
 ```    
 $reset = *reset;
 $num[31:0] = $reset ? 1 : (>>1$num + >>2$num);
 ```
+---
+![fibonacciimplment](https://github.com/akul-star/RISC-V/assets/75561390/4a381904-38b2-4403-9b74-24b0d4db1977)
 
 </details>
 
