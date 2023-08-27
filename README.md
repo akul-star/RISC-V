@@ -850,7 +850,8 @@ The output observed in Makerchip IDE:
 
 <details>
 	<summary> Validity </summary>
----
+
+----
 First, we shall see a distance accumulator coupled with a Pythagorean pipeline as shown below. 
 
 ![validity1](https://github.com/akul-star/RISC-V/assets/75561390/ca5880e5-8c21-406c-9257-2c982c621661)
