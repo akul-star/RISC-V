@@ -753,6 +753,7 @@ The TL-verilog code is given below
    $reset = *reset;
    $cnt[31:0] = $reset ? 0 : (>>1$cnt + 1);
 ```
+![counter](https://github.com/akul-star/RISC-V/assets/75561390/3593504f-3da7-4463-be59-48814d3a02a7)
 
 </details>
 
