@@ -843,7 +843,7 @@ The TL-verilog code is given below:
       @2
          $out[31:0] = ($reset | ~($valid))  ? 32'h0 : ($op[1] ? ($op[0] ? $div : $prod):($op[0] ? $diff : $sum));
 ```
-The output observed in Makerchi IDE:
+The output observed in Makerchip IDE:
 ![2_calc_op](https://github.com/akul-star/RISC-V/assets/75561390/051db2a1-7732-4347-a7d0-96b066d47d03)
 
 </details>
@@ -851,8 +851,12 @@ The output observed in Makerchi IDE:
 <details>
 	<summary> Validity </summary>
 ---
-First, we shall see a distance accumulator coupled with a Pythagorean pipeline as shown below. The TL-verilog code required is given below:
+First, we shall see a distance accumulator coupled with a Pythagorean pipeline as shown below. 
 
+![validity1](https://github.com/akul-star/RISC-V/assets/75561390/ca5880e5-8c21-406c-9257-2c982c621661)
+
+---
+The TL-verilog code required is given below:
 ```
 \m5_TLV_version 1d: tl-x.org
 \m5
@@ -895,7 +899,91 @@ First, we shall see a distance accumulator coupled with a Pythagorean pipeline a
    endmodule
 ```
 Output observed in Makerchip IDE.
-![validity1](https://github.com/akul-star/RISC-V/assets/75561390/ca5880e5-8c21-406c-9257-2c982c621661)
+![validity2](https://github.com/akul-star/RISC-V/assets/75561390/70f7691c-3f6b-4fd8-9d0f-0741d7fdd1b0)
+
+**Cycle Calculator with Validity**
+
+The following design is what we are required to create.
+
+![validity3](https://github.com/akul-star/RISC-V/assets/75561390/e9c216a6-55b2-4487-b8c4-91d06732ad33)
+
+---
+The TL-verilog code is given below:
+
+```
+\m5_TLV_version 1d: tl-x.org
+\m5
+   
+   // =================================================
+   // Welcome!  New to Makerchip? Try the "Learn" menu.
+   // =================================================
+   
+   //use(m5-1.0)   /// uncomment to use M5 macro library.
+
+
+\SV
+   // Macro providing required top-level module definition, random
+   // stimulus support, and Verilator config.
+   m5_makerchip_module   // (Expanded in Nav-TLV pane.)
+\TLV
+   |calc
+      @0
+         $reset = *reset;
+      @1
+         $valid = $reset ? 0 : (>>1$num + 1);
+         $valid_or_reset = $valid || $reset;
+      ?$valid
+         @1
+            $val1[31:0] = >>2$out[31:0];
+            $val2[31:0] = $rand2[3:0];
+            $op[1:0] = $rand3[1:0];
+            $sum[31:0] = $val1[31:0] + $val2[31:0];
+            $diff[31:0] = $val1[31:0] - $val2[31:0];
+            $prod[31:0] = $val1[31:0] * $val2[31:0];
+            $quot[31:0] = $val1[31:0] / $val2[31:0];
+      @2
+         $out[31:0] = $valid_or_reset ? 32'b0 : ($op[1:0]==2'b00) ? $sum[31:0] : 
+                                    ($op[1:0]==2'b01) ? $diff[31:0] :
+                                                       ($op[1:0]==2'b10) ? $prod[31:0] : 
+                                                                           $quot[31:0];                                                                
+
+   
+   
+   // Assert these to end simulation (before Makerchip cycle limit).
+   *passed = *cyc_cnt > 40;
+   *failed = 1'b0;
+\SV
+   endmodule
+```
+The output observed in Makerchip IDE:
+![validity4](https://github.com/akul-star/RISC-V/assets/75561390/2db58742-3583-4105-9144-54aadb3c307b)
+
+**Cycle Calculator with Validity & Memory**
+
+The design we have to implement is given below.
+![validity5](https://github.com/akul-star/RISC-V/assets/75561390/6748d445-dce0-4254-8205-812501dce4e1)
+
+The TL-Verilog code is given below:
+ ```
+   $reset = *reset;
+   $op[1:0] = $random[1:0];
+   $val2[31:0] = $rand2[3:0];
+   
+   |calc
+      @1
+         $val1[31:0] = >>2$out;
+         $sum[31:0] = $val1+$val2;
+         $diff[31:0] = $val1-$val2;
+         $prod[31:0] = $val1*$val2;
+         $div[31:0] = $val1/$val2;
+         $valid = $reset ? 0 : (>>1$valid + 1);
+      @2
+         $out[31:0] = ($reset | ~($valid))  ? 32'h0 : ($op[1] ? ($op[0] ? $div : $prod):($op[0] ? $diff : $sum));
+```
+
+The output observed in Makerchip IDE:
+
+![validity6](https://github.com/akul-star/RISC-V/assets/75561390/5b91ec68-ffdd-4ca8-9311-dc3890c78324)
 
 </details>
 
