@@ -1,4 +1,4 @@
-# RISC-V INSTRUCTION SET ARCHITECTURE (ISA)
+``# RISC-V INSTRUCTION SET ARCHITECTURE (ISA)
 ISA stands for "Instruction Set Architecture." It is a crucial concept in computer architecture that defines the set of instructions that a computer's hardware can execute. An ISA essentially serves as an interface between the hardware and the software, allowing software programs to communicate with and control the underlying hardware components of a computer.
 
 The ISA defines various aspects of a computer's operation, including:
@@ -677,8 +677,23 @@ $out = $sel ? $in1 : $in2
 ![Makerchip_mux](https://github.com/akul-star/RISC-V/assets/75561390/7581d4ae-bc88-499a-bbd3-ede8dc8bd463)
 
 **5. Combinational Calculator**
+This circuit implements a calculator that can perform addition, substraction, multiplication and divion on two inputs (32bits each). Encoded select will select the operation we want as an output between two numbers.
 
-
+---
+![calculatorckt](https://github.com/akul-star/RISC-V/assets/75561390/caf501de-2cef-4ab8-a5a3-c45f57961031)
+ 
+ The code for the combinational calculator using multiplexer is given below.
+```
+ $reset = *reset;
+   $op[1:0] = $random[1:0];
+   
+   $val1[31:0] = $rand1[3:0];
+   $val2[31:0] = $rand2[3:0];
+   $sum[31:0] = $val1+$val2;
+   $diff[31:0] = $val1-$val2;
+   $prod[31:0] = $val1*$val2;
+   $div[31:0] = $val1/$val2;
+```
 
 
 </details>
