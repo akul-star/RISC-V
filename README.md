@@ -735,6 +735,9 @@ Implementing a Fibonacci series using D flip-flops involves using two flip-flops
 
 This arrangement utilizes flip-flops to store and update the terms of the Fibonacci series, and logic gates to perform the addition operation. The clock input of the flip-flops ensures synchronous updating.
 
+---
+![fibonacci_series](https://github.com/akul-star/RISC-V/assets/75561390/8258d6cb-036b-4d46-a314-027f461179a8)
+
 
 </details>
 
