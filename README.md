@@ -662,7 +662,21 @@ $in = !$out
 ---
 ![TLV-inverter](https://github.com/akul-star/RISC-V/assets/75561390/ffe2e7be-8c48-4caf-81c7-f604f2e800ff)
 
-**3.
+**3. Vectors Addition**
+
+Note that the bit ranhes can generally be assumed on the left-hand side, but with no assignments to these signals, they must be explicit. 
+---
+![vector](https://github.com/akul-star/RISC-V/assets/75561390/e31cde5d-c028-47d4-86fa-50dd94877cd3)
+
+**4. Multipltxer**
+
+TL-verilog code for Mux is given below,
+```
+$out = $sel ? $in1 : $in2
+```
+
+
+
 
 </details>
 
