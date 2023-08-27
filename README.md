@@ -819,7 +819,11 @@ The TL-verilog code is given below:
 Output in Makerchip:
 
 ---
+![error_demo](https://github.com/akul-star/RISC-V/assets/75561390/9dab19a2-be9f-42d9-8211-dee6043d2e54)
 
+**Two-Cycle Calculator**
+
+Block Diagram for Two-cycle calculator:
 
 
 </details>
