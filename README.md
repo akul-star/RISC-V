@@ -1012,6 +1012,7 @@ Makerchip IDE output:
 ## DAY-4: Basic RISC-V CPU micro-architecture 
 <details>
 	<summary> Introduction to Simple RISC-V Micro-architecture </summary>
+---
 The RISC-V CPU architecture is designed to be modular, flexible, and extensible, making it suitable for a wide range of applications and implementations. Here's a brief explanation of the major blocks in a basic RISC-V CPU block diagram:
 
 - Instruction Fetch (IF) Stage:
