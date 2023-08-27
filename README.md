@@ -1,4 +1,4 @@
-``# RISC-V INSTRUCTION SET ARCHITECTURE (ISA)
+# RISC-V INSTRUCTION SET ARCHITECTURE (ISA)
 ISA stands for "Instruction Set Architecture." It is a crucial concept in computer architecture that defines the set of instructions that a computer's hardware can execute. An ISA essentially serves as an interface between the hardware and the software, allowing software programs to communicate with and control the underlying hardware components of a computer.
 
 The ISA defines various aspects of a computer's operation, including:
@@ -737,7 +737,12 @@ This arrangement utilizes flip-flops to store and update the terms of the Fibona
 
 ---
 ![fibonacci_series](https://github.com/akul-star/RISC-V/assets/75561390/8258d6cb-036b-4d46-a314-027f461179a8)
-
+ 
+ The code required will be given as below.
+```    
+$reset = *reset;
+$num[31:0] = $reset ? 1 : (>>1$num + >>2$num);
+```
 
 </details>
 
