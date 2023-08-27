@@ -674,6 +674,7 @@ TL-verilog code for Mux is given below,
 ```
 $out = $sel ? $in1 : $in2
 ```
+![Makerchip_mux](https://github.com/akul-star/RISC-V/assets/75561390/7581d4ae-bc88-499a-bbd3-ede8dc8bd463)
 
 
 
