@@ -676,6 +676,8 @@ $out = $sel ? $in1 : $in2
 ```
 ![Makerchip_mux](https://github.com/akul-star/RISC-V/assets/75561390/7581d4ae-bc88-499a-bbd3-ede8dc8bd463)
 
+**5. Combinational Calculator**
+
 
 
 
