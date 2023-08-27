@@ -757,6 +757,11 @@ The TL-verilog code is given below
 
 </details>
 
+<details>
+  <summary> Pipelined Logic </summary>
+
+ 
+</details>
 
 ## References
 
