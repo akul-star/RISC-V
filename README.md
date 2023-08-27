@@ -746,6 +746,14 @@ $num[31:0] = $reset ? 1 : (>>1$num + >>2$num);
 ---
 ![fibonacciimplment](https://github.com/akul-star/RISC-V/assets/75561390/4a381904-38b2-4403-9b74-24b0d4db1977)
 
+Counter using D-Flipflop
+==========================
+The TL-verilog code is given below
+```
+   $reset = *reset;
+   $cnt[31:0] = $reset ? 0 : (>>1$cnt + 1);
+```
+
 </details>
 
 
