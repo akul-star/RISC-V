@@ -1006,10 +1006,61 @@ Pipeline structure:
 Makerchip IDE output:
 ![pythagoreanmakerchip](https://github.com/akul-star/RISC-V/assets/75561390/d1390bec-26d7-4667-b76b-6fe6fa09de59)
 
+</details>
+
+
 ## DAY-4: Basic RISC-V CPU micro-architecture 
 <details>
 	<summary> Introduction to Simple RISC-V Micro-architecture </summary>
-</details>
+The RISC-V CPU architecture is designed to be modular, flexible, and extensible, making it suitable for a wide range of applications and implementations. Here's a brief explanation of the major blocks in a basic RISC-V CPU block diagram:
+
+- Instruction Fetch (IF) Stage:
+
+---
+Microarchitecture refers to the internal design and organization of a CPU that implements a particular ISA. RISC-V CPUs can have different microarchitectures that optimize for various aspects such as performance, power efficiency, and area (size of the chip). Here are some key features and concepts commonly found in RISC-V microarchitecture:
+
+- Instruction Fetch (IF)
+- Instruction Decode (ID)
+- Execution Units
+
+It's important to note that RISC-V is an instruction set architecture, and microarchitectures based on RISC-V can vary widely depending on the design goals of the processor manufacturer. Different companies and research institutions may develop their own microarchitectures that implement the RISC-V ISA in unique ways, tailored to specific use cases and performance goals.
+
+Here we are designing the basic processor of 3 stages fetch, decode and execute based on RISC-V ISA. For starting the implementation a starter code is present in the github repository provided.
+
+
+This stage is responsible for fetching instructions from memory. It includes components like:
+        Program Counter (PC): Holds the address of the next instruction to be fetched.
+        Instruction Memory: Stores the program instructions.
+
+- Instruction Decode (ID) Stage:
+
+  In this stage, the fetched instruction is decoded to determine the type of operation and the operands involved. It includes:
+        Instruction Decoder: Decodes the instruction and extracts control signals.
+        Register File: Holds the CPU's general-purpose registers.
+  
+- Execution (EX) Stage:
+
+This is where the actual execution of arithmetic and logic operations takes place. Components include:
+       ALU (Arithmetic Logic Unit): Performs arithmetic and logic operations.
+       Control Unit: Generates control signals for ALU operations and data movement.
+
+- Memory Access (MEM) Stage:
+
+This stage handles memory operations such as load and store. It includes:
+    Data Memory: Stores data that the CPU reads from or writes to.
+    Memory Address Calculation: Calculates the memory address for load and store operations.
+
+- Write-Back (WB) Stage:
+
+After executing an instruction, the results are written back to the register file if necessary.
+
+- Control Unit:
+
+The control unit generates control signals that coordinate the operation of different stages and components in the CPU.
+
+- Pipeline Registers:
+
+Between each stage, pipeline registers are used to hold the data being transferred from one stage to the next.
 
 
 </details>
